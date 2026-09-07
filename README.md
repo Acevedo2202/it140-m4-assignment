@@ -1,4 +1,4 @@
-<!-- To see this file in a clean, formatted view, select "Text Editor ▼" in the upper-right corner of the editor, then select "Markdown Preview". -->
+<!-- To see this file in a clean, formatted view, select ▼ in the upper-right corner of the editor pane, then select "Markdown Preview". -->
 
 # IT 140 Module Four Assignment | Pseudocode Revisited
 
@@ -9,12 +9,12 @@
 >
 > **Do not select Fork or Use this template.** These options will interfere with the repository setup commands later in this README.
 >
-> - 🚫 **Fork — Do not use**
-> - 🚫 **Use this template — Do not use**
-> - ⭐ **Star** — The setup commands later in this README will bookmark this repository for you.
-> - 👁️ **Watch**
->   - **Students:** Not recommended. Watching is not needed and may generate unnecessary notifications.
->   - **Faculty:** Consider selecting **Watch → Custom → Releases + Issues** to receive major repository updates and follow reported issues.
+> * 🚫 **Fork — Do not use**
+> * 🚫 **Use this template — Do not use**
+> * ⭐ **Star** — The setup commands later in this README will bookmark this repository for you.
+> * 👁️ **Watch**
+>   * **Students:** Not recommended. Watching is not needed and may generate unnecessary notifications.
+>   * **Faculty:** Consider selecting **Watch → Custom → Releases + Issues** to receive major repository updates and follow reported issues.
 
 ---
 
@@ -25,11 +25,11 @@
 
 ---
 
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Task Title**: 4-3: Pseudocode Revisited
-- **Task Type**: Required, graded, one submission required
-- **Repository Version**: 1.0.3
-- **Repository Version DTG**: 2026-09-02-09-37
+* **Course**: IT 140 - *Introduction to Scripting*
+* **Task Title**: 4-3: Pseudocode Revisited
+* **Task Type**: Required, graded, one submission required
+* **Repository Version**: 1.0.4
+* **Repository Version DTG**: 2026-09-07-14-30
 - **Design Problem**: Higher/Lower Game
 - **Graded Deliverable**:
   - [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
