@@ -22,7 +22,8 @@ EDITABLE_PATHS = {
     "src/hilow_game.py",
 }
 
-GRADED_PATHS = {"design/hilow_game.pseudo"}
+GRADED_PATH = "design/hilow_game.pseudo"
+GRADED_PATHS = {GRADED_PATH}
 
 REQUIRED_FILES = (
     ".gitattributes",
@@ -32,12 +33,14 @@ REQUIRED_FILES = (
     ".github/RЕADME.md",
     ".github/ISSUE_TEMPLATE/report-a-problem.yml",
     ".github/ISSUE_TEMPLATE/request-an-improvement.yml",
+    ".github/ci/README.md",
+    ".github/ci/check_readme_commands.py",
     ".github/ci/check_repository.py",
     ".github/ci/check_starter.py",
     ".github/social-preview.png",
     ".github/workflows/external-links.yml",
+    ".github/workflows/readme-commands.yml",
     ".github/workflows/tests.yml",
-    ".github/workflows/tests.yml.disabled",
     ".vscode/settings.json",
     "analysis/README.md",
     "analysis/hilow_game_srs.md",
@@ -55,6 +58,7 @@ REQUIRED_FILES = (
 PROVIDED_MARKDOWN = (
     "README.md",
     ".github/RЕADME.md",
+    ".github/ci/README.md",
     "analysis/README.md",
     "analysis/hilow_game_srs.md",
     "design/README.md",
@@ -70,14 +74,31 @@ REQUIRED_TEXT_MARKERS = {
         "# IT 140 Module Four Assignment",
         "## 0. Meet the Prerequisites",
         "## 1. Set Up or Open Your Assignment Repository",
+        "### Understand the Related Copies",
+        "### If You Work on More Than One Device",
         "## 2. Complete the Assignment",
+        "### 2.3 Save Your Work to GitHub",
+        "### 2.4 Review the Assignment Checks",
         "## 3. Submit Your Assignment",
+        "## Optional: Continue Through Construct and Test",
+        "## Restore or Restart Your Assignment Repository",
         "## Help and Support",
     ),
     ".github/RЕADME.md": (
         "# About the `.github` Folder",
         "## What Is Here?",
-        "## Automated Repository Checks",
+        "## Automated Checks",
+        "## Issue or Assignment Question?",
+    ),
+    ".github/ci/README.md": (
+        "# IT 140 Module Four Assignment | GitHub Continuous Integration Guide",
+        "## About CI",
+        "## Student CI",
+        "## When Something Fails",
+        "## Faculty Guidance",
+        "## Course Repository CI",
+        "## Maintainer Guidance",
+        "## Summary",
     ),
     "analysis/README.md": (
         "# Analyze Phase | Understand the Higher/Lower Game",
@@ -193,9 +214,7 @@ def check_json_and_toml(checks: Checks) -> None:
     try:
         settings = json.loads(settings_path.read_text(encoding="utf-8"))
         if not isinstance(settings, dict):
-            checks.error(
-                ".vscode/settings.json must contain a JSON object."
-            )
+            checks.error(".vscode/settings.json must contain a JSON object.")
     except (OSError, json.JSONDecodeError) as exc:
         checks.error(f"Invalid .vscode/settings.json: {exc}")
 
@@ -243,9 +262,7 @@ def check_drawio(checks: Checks) -> None:
 
     tag = root.tag.rsplit("}", maxsplit=1)[-1]
     if tag != "mxfile":
-        checks.error(
-            "design/hilow_game.drawio must have an mxfile root."
-        )
+        checks.error("design/hilow_game.drawio must have an mxfile root.")
         return
 
     diagrams = [
@@ -259,9 +276,13 @@ def check_drawio(checks: Checks) -> None:
         checks.note("The provided Draw.io reference is parseable XML.")
 
 
-def check_pseudocode(checks: Checks, mode: str) -> None:
-    """Verify the graded pseudocode keeps its expected outer structure."""
-    text = read_text("design/hilow_game.pseudo")
+def check_pseudocode(
+    checks: Checks,
+    mode: str,
+    changed: set[str] | None,
+) -> None:
+    """Verify pseudocode structure and changed student starter prompts."""
+    text = read_text(GRADED_PATH)
     start = text.find("START hilow_game")
     end = text.rfind("END hilow_game")
 
@@ -272,7 +293,10 @@ def check_pseudocode(checks: Checks, mode: str) -> None:
     if start >= 0 and end >= 0 and start >= end:
         checks.error("Pseudocode START must appear before END.")
 
-    if mode == "student":
+    student_changed_pseudocode = (
+        mode == "student" and changed is not None and GRADED_PATH in changed
+    )
+    if student_changed_pseudocode:
         todo_lines = [
             line.strip()
             for line in text.splitlines()
@@ -280,10 +304,11 @@ def check_pseudocode(checks: Checks, mode: str) -> None:
         ]
         if todo_lines:
             checks.error(
-                "The graded pseudocode still contains starter TODO prompts."
+                "The changed graded pseudocode still contains starter TODO "
+                "prompts."
             )
         else:
-            checks.note("The graded pseudocode starter TODOs were replaced.")
+            checks.note("The changed graded pseudocode has no starter TODOs.")
     elif start >= 0 and end > start:
         checks.note("The pseudocode has the expected START/END structure.")
 
@@ -343,9 +368,7 @@ def check_markdown_links(checks: Checks) -> None:
 
     for relative_path in markdown_files:
         file_path = REPO_ROOT / relative_path
-        text = without_code_fences(
-            file_path.read_text(encoding="utf-8")
-        )
+        text = without_code_fences(file_path.read_text(encoding="utf-8"))
 
         for match in MARKDOWN_LINK.finditer(text):
             target = local_link_target(match.group(1))
@@ -473,28 +496,25 @@ def check_student_change_scope(
         )
 
     if not unexpected:
-        checks.note(
-            "Committed changes are limited to student-editable files."
-        )
+        checks.note("Committed changes are limited to student-editable files.")
 
 
 def check_student_graded_changes(
     checks: Checks,
     changed: set[str] | None,
 ) -> None:
-    """Verify the graded pseudocode differs from the template commit."""
+    """Give neutral starter feedback, then confirm pseudocode changed."""
     if changed is None:
         return
 
-    missing = sorted(GRADED_PATHS - changed)
-    for path in missing:
-        checks.error(
-            "Graded design file has not changed from starter template: "
-            f"{path}"
+    if GRADED_PATH not in changed:
+        checks.note(
+            "No graded pseudocode change is committed yet; the untouched "
+            "starter state is not treated as a student error."
         )
+        return
 
-    if not missing:
-        checks.note("The graded pseudocode differs from the starter state.")
+    checks.note("The graded pseudocode differs from the starter state.")
 
 
 def parse_args() -> argparse.Namespace:
@@ -518,17 +538,22 @@ def main() -> None:
     if checks.errors:
         checks.finish()
 
+    changed: set[str] | None = None
+    if args.mode == "student":
+        changed = student_changed_paths(checks)
+
     check_json_and_toml(checks)
     check_required_text_markers(checks)
     check_drawio(checks)
-    check_pseudocode(checks, args.mode)
+    check_pseudocode(checks, args.mode, changed)
     check_markdown_links(checks)
     check_social_preview(checks)
 
     if args.mode == "student":
-        changed = student_changed_paths(checks)
         check_student_change_scope(checks, changed)
         check_student_graded_changes(checks, changed)
+    else:
+        checks.note("Starter mode skips student completion checks.")
 
     checks.finish()
 

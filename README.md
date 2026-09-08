@@ -116,11 +116,12 @@ Earlier topics on input/output, `if`/`elif`/`else`, relational operators, Boolea
 
 You create your personal `it140-m4-assignment` repository only once.
 
+> [!IMPORTANT]
+> **Windows users:** Run all `bash` command blocks in this README in a **Git Bash** terminal. Do not use PowerShell or Command Prompt for these command blocks.
+
 ### If You Have Not Created It Yet
 
-Use the VS Code integrated terminal. On Windows, use **PowerShell** or **Git Bash**, not Command Prompt (`cmd.exe`).
-
-First confirm the GitHub account you use for IT 140:
+Use the VS Code integrated terminal. First confirm the GitHub account you use for IT 140:
 
 ```bash
 gh auth status
@@ -130,6 +131,7 @@ If the correct account is not active, use the GitHub CLI sign-in or account-swit
 
 Then run:
 
+<!-- ci:command-test id=setup-personal-repo fixture=empty-repos expect=repo -->
 ```bash
 cd ~/Repos
 gh auth setup-git
@@ -144,22 +146,82 @@ Confirm that the final remote belongs to **your GitHub account**.
 > [!NOTE]
 > These creation commands are for the first successful setup only. If a personal repository or local folder already exists, open that existing work instead of creating another repository.
 
-### If You Already Created It
+### If You Already Created It on This Device
 
-Open VS Code and select **File > Open Folder**, then open:
+Open the existing local clone from a terminal:
 
-```text
-~/Repos/it140-m4-assignment
+<!-- ci:command-test id=open-existing-repo fixture=existing-repo expect=repo -->
+```bash
+cd ~/Repos/it140-m4-assignment
+code .
 ```
 
-If you are on another computer and your personal repository exists on GitHub but not locally, clone your existing repository:
+*Reminder*. In terminal commands, **`~`** means your home folder, and **`.`** means the current working directory. `code .` opens the current folder in VS Code.
 
+>*Note*
+> If VS Code opens in Restricted Mode, your `~/Repos` folder should already be trusted if you completed the Module One course IDE setup. Normally, you will not see this warning.
+>
+> If you see the **Restricted Mode** warning bar:
+>
+> ![Restricted Mode warning bar in VS Code](https://raw.githubusercontent.com/GC-STEM/it140-m2-assignment/main/.github/assets/22_vscode_restricted_mode_bar.png)
+>
+> 1. Click **Manage** on the **Restricted Mode** warning bar.
+> 2. In **Workspace Trust**, find **Trusted Folders & Workspaces**.
+> 3. Use the control in that section to add a trusted folder.
+> 4. In the folder selection window, go to your home folder and select the entire **Repos** folder.
+> 5. Confirm the folder selection and trust it when prompted.
+> 6. Verify that your **Repos** folder appears under **Trusted Folders & Workspaces**.
+>
+> Trust the entire `~/Repos` folder rather than only `it140-m4-assignment`. VS Code applies trust to all subfolders of a trusted parent folder, including this assignment repository.
+
+### Understand the Related Copies
+
+Your Module Four assignment normally has three related copies:
+
+* **Public course template on GitHub:** `GC-STEM/it140-m4-assignment`. This is the course-provided starting point. Do not fork or edit this copy.
+* **Your personal GitHub repository:** `it140-m4-assignment` in your own GitHub account. This stores work you push to GitHub.
+* **A local clone on a device:** Usually `~/Repos/it140-m4-assignment`. This is the copy you open in VS Code and edit.
+
+The setup command creates the personal GitHub repository and then creates its local clone on the device where you run the command.
+
+### If Your Personal Repository Exists but This Device Does Not Have a Local Clone
+
+Clone your existing personal repository rather than creating a new one:
+
+<!-- ci:command-test id=clone-existing-repo fixture=empty-repos expect=repo -->
 ```bash
 cd ~/Repos
 gh repo clone "$(gh api user --jq .login)/it140-m4-assignment"
 cd it140-m4-assignment
 git status
 ```
+
+### If You Work on More Than One Device
+
+Using one device for an assignment is the simplest and safest approach. If you must switch devices, synchronize your work before and after the switch.
+
+Before leaving the device where you have been working:
+
+<!-- ci:command-test id=sync-before-switch fixture=existing-repo expect=repo -->
+```bash
+cd ~/Repos/it140-m4-assignment
+git status
+git add hilow_game_sdw.md design/hilow_game.pseudo src/hilow_game.py
+git commit -m "Save Module Four assignment progress"
+git push
+```
+
+On the other device, before editing any file:
+
+<!-- ci:command-test id=sync-after-switch fixture=existing-repo expect=repo -->
+```bash
+cd ~/Repos/it140-m4-assignment
+git pull --ff-only
+git status
+```
+
+> [!WARNING]
+> If `git pull --ff-only` or `git push` reports an error or says the histories cannot be fast-forwarded, **stop and do not make more changes on either device** until you get help. Do not try random merge or reset commands.
 
 ## 2. Complete the Assignment
 
@@ -198,8 +260,7 @@ Review the completed pseudocode against the current Guidelines and Rubric before
 
 Save your files normally while you work in VS Code. Periodically commit and push your assignment work so your personal GitHub repository contains a current backup.
 
-You can use the **Source Control** tools in VS Code or run the following from the repository root:
-
+<!-- ci:command-test id=save-progress fixture=existing-repo expect=repo -->
 ```bash
 cd ~/Repos/it140-m4-assignment
 git status
@@ -208,36 +269,46 @@ git commit -m "Save Module Four assignment progress"
 git push
 ```
 
-These commands stage only the student working, graded design, and optional practice files.
+These commands:
 
-If Git reports that there is nothing to commit, your local files do not contain new changes that need to be saved to GitHub.
+* `git status` shows the current state of your local repository.
+* `git add` prepares only your student-editable Module Four files to be saved.
+* `git commit` saves a snapshot of those files in your local Git repository.
+* `git push` uploads that commit to your personal GitHub repository.
 
 > [!NOTE]
-> GitHub is used to develop and back up your work. **Assignment submission, grading, and instructor feedback remain in D2L Brightspace.**
+> If Git reports `nothing to commit, working tree clean`, your current files have already been committed. The `git push` command will still check whether your personal GitHub repository is up to date.
+
+> [!IMPORTANT]
+> **Saving your work to GitHub does not submit your assignment.** Assignment submission, grading, and instructor feedback remain in D2L Brightspace.
 
 ### 2.4 Review the Assignment Checks
 
-Each push runs the **Assignment Checks** workflow in your personal repository.
+Each push to your personal repository runs the **IT 140 Checks** workflow.
 
-While you are still working, a red **X** can simply mean that the graded pseudocode is still in the starter state. As you complete your work, the checks can verify basic repository conditions such as:
+A newly created personal repository should **not** fail merely because the graded pseudocode is still the untouched starter file. Once you begin changing the graded pseudocode, the checks provide formative feedback about the current repository state.
+
+The assignment artifact check can verify basic conditions such as:
 
 - required course files are still present;
 - committed changes are limited to student-editable files;
-- the graded pseudocode changed from its starter state;
+- after graded work begins, the graded pseudocode differs from the starter state;
 - the pseudocode retains its outer `START` / `END` structure;
-- starter `TODO:` prompts are no longer present in the graded pseudocode; and
+- changed pseudocode no longer contains starter `TODO:` prompts; and
 - course-provided Markdown and configuration remain internally consistent.
 
 The checks also verify that the provided Draw.io reference remains readable, but the Draw.io file is **not** a graded Module Four deliverable.
 
-The Assignment Checks **do not grade the quality or correctness of your pseudocode**. A green check is not a grade and does not submit your assignment.
+The optional Python construction file and optional practice tests are **not required by the student assignment artifact check**.
+
+The checks **do not grade the quality or correctness of your pseudocode**. A green check is not a grade and does not submit your assignment.
 
 To review a run:
 
 1. Open your personal repository on GitHub.
 2. Select **Actions**.
-3. Open the most recent **Assignment Checks** run.
-4. Open **Check assignment repository** to see the results.
+3. Open the most recent **IT 140 Checks** run.
+4. Open **Assignment artifact check** and review the summary.
 
 ## 3. Submit Your Assignment
 
@@ -262,25 +333,17 @@ Optional practice is intended to help you connect design to implementation befor
 
 Choose the recovery method that matches the problem. Preserve existing work whenever possible.
 
+> [!IMPORTANT]
+> **Windows users:** Run the `bash` command blocks in this section in **Git Bash**, not PowerShell or Command Prompt.
+
 ### Restore a Damaged Local Copy From GitHub
 
 Use this when the copy you previously pushed to GitHub is good but the local folder is damaged or confusing.
 
-#### CVD, Linux, macOS, or Git Bash on Windows
-
+<!-- ci:command-test id=restore-local-copy fixture=existing-repo expect=repo -->
 ```bash
 cd ~/Repos
 mv it140-m4-assignment "it140-m4-assignment-local-backup-$(date +%Y%m%d-%H%M%S)"
-gh repo clone "$(gh api user --jq .login)/it140-m4-assignment"
-cd it140-m4-assignment
-git status
-```
-
-#### Windows PowerShell
-
-```powershell
-cd ~/Repos
-Rename-Item it140-m4-assignment "it140-m4-assignment-local-backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 gh repo clone "$(gh api user --jq .login)/it140-m4-assignment"
 cd it140-m4-assignment
 git status
@@ -290,25 +353,12 @@ git status
 
 Use this only when you intentionally want a fresh assignment copy. Preserve the old local folder and GitHub repository first.
 
-#### CVD, Linux, macOS, or Git Bash on Windows
-
+<!-- ci:command-test id=restart-from-template fixture=existing-repo expect=repo -->
 ```bash
 cd ~/Repos
 backup="it140-m4-assignment-backup-$(date +%Y%m%d-%H%M%S)"
 mv it140-m4-assignment "$backup"
 gh repo rename "$backup" --repo "$(gh api user --jq .login)/it140-m4-assignment" --yes
-gh repo create it140-m4-assignment --template GC-STEM/it140-m4-assignment --private --clone
-cd it140-m4-assignment
-git remote -v
-```
-
-#### Windows PowerShell
-
-```powershell
-cd ~/Repos
-$backup = "it140-m4-assignment-backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
-Rename-Item it140-m4-assignment $backup
-gh repo rename $backup --repo "$(gh api user --jq .login)/it140-m4-assignment" --yes
 gh repo create it140-m4-assignment --template GC-STEM/it140-m4-assignment --private --clone
 cd it140-m4-assignment
 git remote -v
@@ -322,7 +372,9 @@ git remote -v
 Use the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations of the SDLC, assignment documents, pseudocode, loops, course IDE tools, Git/GitHub, testing, sources, and AI use.
 
 - Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about using this repository that do not request a completed graded solution.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided repository, starter files, documentation, automated checks, or course tools.
-- Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, or course-specific questions.
+- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided repository, starter files, documentation, or automated checks.
+- For **Codio Virtual Desktop performance, access, or outage problems**, contact the **IT Service Desk** using the link on the main menu bar in D2L Brightspace.
+- For **course IDE setup or lifecycle-script problems**, see [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support).
+- Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, deadlines, submissions, or course-specific questions.
 
 Do not post your completed graded pseudocode publicly when asking for help.

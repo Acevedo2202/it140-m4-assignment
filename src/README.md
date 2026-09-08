@@ -109,16 +109,11 @@ A useful cycle is:
 4. correct any syntax or runtime error; and
 5. continue only after the program runs again.
 
-From the repository root:
+From the repository root, use the same Bash commands on the CVD, Linux, macOS, and Windows Git Bash:
 
 ```bash
+cd ~/Repos/it140-m4-assignment
 python3 src/hilow_game.py
-```
-
-On Windows, if your configured environment uses `python` rather than `python3`, use:
-
-```powershell
-python src/hilow_game.py
 ```
 
 ### 7. Complete the Module Docstring
