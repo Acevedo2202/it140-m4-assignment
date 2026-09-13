@@ -24,11 +24,11 @@ If testing exposes a design problem, correct the graded pseudocode and review it
 
 Use:
 
-- [`../src/hilow_game.py`](../src/hilow_game.py) — optional program you constructed;
-- your graded [`../design/hilow_game.pseudo`](../design/hilow_game.pseudo);
-- the official Higher/Lower Game Sample Output;
-- the [SRS behavior verification cases](../analysis/hilow_game_srs.md#4-behavior-verification-cases); and
-- [`test_hilow_game.py`](test_hilow_game.py) — provided optional practice tests.
+* [`../src/hilow_game.py`](../src/hilow_game.py) — optional program you constructed;
+* your graded [`../design/hilow_game.pseudo`](../design/hilow_game.pseudo);
+* the official Higher/Lower Game Sample Output;
+* the [SRS behavior verification cases](../analysis/hilow_game_srs.md#4-behavior-verification-cases); and
+* [`test_hilow_game.py`](test_hilow_game.py) — provided optional practice tests.
 
 Do not modify the provided test file to make a failing test pass.
 
@@ -47,14 +47,14 @@ If Python reports a syntax or runtime error, return to the [Construct Phase](../
 
 Across several runs, check the required behaviors:
 
-- valid lower and upper bounds;
-- invalid bounds followed by valid bounds;
-- a guess below the selected range;
-- a guess above the selected range;
-- a valid guess below the target number;
-- a valid guess above the target number;
-- a correct guess; and
-- several guesses before the correct guess.
+* valid lower and upper bounds;
+* invalid bounds followed by valid bounds;
+* a guess below the selected range;
+* a guess above the selected range;
+* a valid guess below the target number;
+* a valid guess above the target number;
+* a correct guess; and
+* several guesses before the correct guess.
 
 Because the target number is random, you may need more than one normal run to exercise every path.
 
@@ -90,9 +90,9 @@ That means the optional implementation satisfied the behaviors covered by these 
 
 It does **not** mean:
 
-- your pseudocode has been graded;
-- every rubric criterion is automatically satisfied; or
-- the assignment has been submitted.
+* your pseudocode has been graded;
+* every rubric criterion is automatically satisfied; or
+* the assignment has been submitted.
 
 ### A Test Fails
 
@@ -104,9 +104,9 @@ Read:
 
 Then compare the same case with:
 
-- the SRS;
-- your pseudocode; and
-- your Python code.
+* the SRS;
+* your pseudocode; and
+* your Python code.
 
 Find the **first place** where they stop agreeing.
 
@@ -138,26 +138,26 @@ If coding reveals a design error, revise the graded pseudocode first and then br
 
 ## 6. Check Your Work
 
-- [ ] The optional program runs without a Python error.
-- [ ] I checked valid and invalid bound behavior.
-- [ ] I checked out-of-range guess behavior.
-- [ ] I checked too-low and too-high valid guesses.
-- [ ] I checked a correct guess.
-- [ ] I checked repeated guessing before success.
-- [ ] My program behavior remains consistent with my pseudocode.
-- [ ] If a test failed, I corrected the cause rather than modifying the provided test.
-- [ ] If I changed the graded pseudocode, I reviewed it again against the official rubric.
+* [ ] The optional program runs without a Python error.
+* [ ] I checked valid and invalid bound behavior.
+* [ ] I checked out-of-range guess behavior.
+* [ ] I checked too-low and too-high valid guesses.
+* [ ] I checked a correct guess.
+* [ ] I checked repeated guessing before success.
+* [ ] My program behavior remains consistent with my pseudocode.
+* [ ] If a test failed, I corrected the cause rather than modifying the provided test.
+* [ ] If I changed the graded pseudocode, I reviewed it again against the official rubric.
 
 ## Help and Support
 
 If you have difficulty:
 
-- Review the [SRS behavior verification cases](../analysis/hilow_game_srs.md#4-behavior-verification-cases).
-- Review [Construct](../src/README.md) for syntax, indentation, and incremental-development guidance.
-- See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental testing and debugging explanations.
-- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about optional practice tools.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided test file or repository checks.
-- Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
+* Review the [SRS behavior verification cases](../analysis/hilow_game_srs.md#4-behavior-verification-cases).
+* Review [Construct](../src/README.md) for syntax, indentation, and incremental-development guidance.
+* See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental testing and debugging explanations.
+* Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about optional practice tools.
+* Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided test file or repository checks.
+* Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
 
 ## Next Step
 

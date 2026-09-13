@@ -1,9 +1,9 @@
 # Software Design Document (SDD)
 
-- **Course:** IT 140 - *Introduction to Scripting*
-- **Activity:** Module Four Assignment
-- **Program:** Higher/Lower Game
-- **Status:** Design reference; do not edit
+* **Course:** IT 140 - *Introduction to Scripting*
+* **Activity:** Module Four Assignment
+* **Program:** Higher/Lower Game
+* **Status:** Design reference; do not edit
 
 ## 0. Purpose
 
@@ -24,12 +24,12 @@ Use these sources while designing:
 
 The design needs to represent several related kinds of work:
 
-- **Input** — obtain the range bounds and player guesses.
-- **Validation** — determine whether bounds and guesses satisfy the assignment rules.
-- **Random selection** — establish the target number after valid bounds are available.
-- **Decision branching** — distinguish a valid guess that is too low, too high, or correct.
-- **Repetition** — obtain new input when required and continue the game until the correct guess.
-- **Output** — communicate prompts, feedback, and success.
+* **Input** — obtain the range bounds and player guesses.
+* **Validation** — determine whether bounds and guesses satisfy the assignment rules.
+* **Random selection** — establish the target number after valid bounds are available.
+* **Decision branching** — distinguish a valid guess that is too low, too high, or correct.
+* **Repetition** — obtain new input when required and continue the game until the correct guess.
+* **Output** — communicate prompts, feedback, and success.
 
 Your pseudocode should make the relationship among these steps clear without adding requirements that are not in the assignment.
 
@@ -39,10 +39,10 @@ The assignment requires the design to identify the user information the program 
 
 Trace the design to confirm that:
 
-- lower and upper bounds are obtained before they are used;
-- a guess is obtained before it is evaluated;
-- invalid input leads to the required opportunity for new input; and
-- each game outcome provides the appropriate feedback.
+* lower and upper bounds are obtained before they are used;
+* a guess is obtained before it is evaluated;
+* invalid input leads to the required opportunity for new input; and
+* each game outcome provides the appropriate feedback.
 
 Exact wording for every prompt or message is not the focus of the rubric. The behavior should be understandable.
 
@@ -62,9 +62,9 @@ The player should proceed only with guesses that satisfy the selected-range requ
 
 After a valid guess is available, the design must distinguish three outcomes:
 
-- lower than the target number;
-- higher than the target number; and
-- equal to the target number.
+* lower than the target number;
+* higher than the target number; and
+* equal to the target number.
 
 The incorrect paths must allow the game to continue. The correct path ends the guessing process.
 
@@ -80,9 +80,9 @@ For every repeated section, ask:
 
 At minimum, the design must account for:
 
-- obtaining bounds again when the required relationship is not satisfied;
-- obtaining another guess when a guess does not satisfy the selected range; and
-- continuing the game after an incorrect valid guess until the target is guessed.
+* obtaining bounds again when the required relationship is not satisfied;
+* obtaining another guess when a guess does not satisfy the selected range; and
+* continuing the game after an incorrect valid guess until the target is guessed.
 
 A loop should have a path toward its stopping condition. Repetition without updated information may describe an infinite loop rather than the required behavior.
 
@@ -90,15 +90,15 @@ A loop should have a path toward its stopping condition. Repetition without upda
 
 Your pseudocode should:
 
-- use clear, logically ordered steps;
-- identify the required inputs and outputs;
-- represent both validation requirements;
-- represent random-number generation;
-- use decision branching for the three valid-guess outcomes;
-- use loops for required repetition;
-- make stopping conditions understandable;
-- use indentation to show statements inside branches and loops; and
-- be detailed enough to guide optional construction without becoming Python code.
+* use clear, logically ordered steps;
+* identify the required inputs and outputs;
+* represent both validation requirements;
+* represent random-number generation;
+* use decision branching for the three valid-guess outcomes;
+* use loops for required repetition;
+* make stopping conditions understandable;
+* use indentation to show statements inside branches and loops; and
+* be detailed enough to guide optional construction without becoming Python code.
 
 ## 7. Requirements Traceability
 
@@ -118,17 +118,17 @@ This table is a review tool. It does not prescribe exact pseudocode statements.
 
 Before submission, ask:
 
-- [ ] Are lower and upper bounds obtained?
-- [ ] Is the required relationship between the bounds validated?
-- [ ] Can invalid bounds lead to new bound input?
-- [ ] Is the target number generated after valid bounds are available?
-- [ ] Is a guess obtained and validated against the selected range?
-- [ ] Can an invalid guess lead to another guess?
-- [ ] Are too-low, too-high, and correct outcomes represented?
-- [ ] Do incorrect valid guesses allow play to continue?
-- [ ] Does a correct guess stop the guessing process?
-- [ ] Are loop and branch bodies clearly indented?
-- [ ] Can the official sample-output behaviors be traced through the design?
+* [ ] Are lower and upper bounds obtained?
+* [ ] Is the required relationship between the bounds validated?
+* [ ] Can invalid bounds lead to new bound input?
+* [ ] Is the target number generated after valid bounds are available?
+* [ ] Is a guess obtained and validated against the selected range?
+* [ ] Can an invalid guess lead to another guess?
+* [ ] Are too-low, too-high, and correct outcomes represented?
+* [ ] Do incorrect valid guesses allow play to continue?
+* [ ] Does a correct guess stop the guessing process?
+* [ ] Are loop and branch bodies clearly indented?
+* [ ] Can the official sample-output behaviors be traced through the design?
 
 ## 9. Optional Construction Handoff
 

@@ -2,9 +2,9 @@
 
 # Software Development Worksheet (SDW)
 
-- **Course:** IT 140 - *Introduction to Scripting*
-- **Activity:** Module Four Assignment
-- **Program:** Higher/Lower Game
+* **Course:** IT 140 - *Introduction to Scripting*
+* **Activity:** Module Four Assignment
+* **Program:** Higher/Lower Game
 
 > Use this worksheet as optional working notes while you move through the **Analyze** and **Design** phases of the simplified Software Development Life Cycle (SDLC).
 >
@@ -18,9 +18,9 @@
 
 The worksheet uses the same pattern throughout:
 
-- **Where to look** tells you where to find the information you need.
-- **Prompt** tells you what to think about or answer.
-- Your response goes immediately after the prompt.
+* **Where to look** tells you where to find the information you need.
+* **Prompt** tells you what to think about or answer.
+* Your response goes immediately after the prompt.
 
 The worksheet intentionally asks questions instead of supplying the completed Higher/Lower Game algorithm. Your graded `design/hilow_game.pseudo` should contain **your** design.
 
@@ -44,12 +44,12 @@ TODO: Summarize the program purpose in your own words.
 
 **Inputs:**
 
-- TODO: Identify the range inputs.
-- TODO: Identify the repeated game input.
+* TODO: Identify the range inputs.
+* TODO: Identify the repeated game input.
 
 **Outputs:**
 
-- TODO: Identify the required categories of output.
+* TODO: Identify the required categories of output.
 
 Do not choose exact message wording yet unless it helps you reason about the behavior.
 
@@ -61,8 +61,8 @@ Do not choose exact message wording yet unless it helps you reason about the beh
 
 **Your notes:**
 
-- TODO: Bounds validation rule and response.
-- TODO: Guess validation rule and response.
+* TODO: Bounds validation rule and response.
+* TODO: Guess validation rule and response.
 
 ## 4. Identify Processing and Decisions
 
@@ -72,8 +72,8 @@ Do not choose exact message wording yet unless it helps you reason about the beh
 
 **Your notes:**
 
-- TODO: Generated value.
-- TODO: Required valid-guess outcomes.
+* TODO: Generated value.
+* TODO: Required valid-guess outcomes.
 
 ## 5. Identify Repeated Behavior
 
@@ -83,9 +83,9 @@ Do not choose exact message wording yet unless it helps you reason about the beh
 
 **Your notes:**
 
-- TODO: Bounds-related repetition.
-- TODO: Guess-validation repetition.
-- TODO: Game repetition and stopping condition.
+* TODO: Bounds-related repetition.
+* TODO: Guess-validation repetition.
+* TODO: Game repetition and stopping condition.
 
 ## 6. Distinguish Requirements From Extra Features
 
@@ -95,21 +95,21 @@ Do not choose exact message wording yet unless it helps you reason about the beh
 
 **Your notes:**
 
-- TODO: Optional feature that should not become a graded requirement.
-- TODO: Another optional feature, or delete this line.
+* TODO: Optional feature that should not become a graded requirement.
+* TODO: Another optional feature, or delete this line.
 
 ## 7. Analyze Checkpoint
 
 Before moving to Design:
 
-- [ ] I can explain the game's purpose in my own words.
-- [ ] I identified the required player inputs.
-- [ ] I identified the required categories of output.
-- [ ] I can explain both validation requirements.
-- [ ] I know when the random number is generated.
-- [ ] I can explain the too-low, too-high, and correct outcomes.
-- [ ] I can identify the repeated behaviors and their stopping conditions.
-- [ ] I did not turn optional features into assignment requirements.
+* [ ] I can explain the game's purpose in my own words.
+* [ ] I identified the required player inputs.
+* [ ] I identified the required categories of output.
+* [ ] I can explain both validation requirements.
+* [ ] I know when the random number is generated.
+* [ ] I can explain the too-low, too-high, and correct outcomes.
+* [ ] I can identify the repeated behaviors and their stopping conditions.
+* [ ] I did not turn optional features into assignment requirements.
 
 # Design Phase
 
@@ -135,8 +135,8 @@ Before moving to Design:
 
 **Your notes:**
 
-- TODO: Bounds-validation plan.
-- TODO: Guess-validation plan.
+* TODO: Bounds-validation plan.
+* TODO: Guess-validation plan.
 
 ## 10. Plan Repetition
 
@@ -144,10 +144,10 @@ Before moving to Design:
 
 For each repeated section, answer:
 
-- What condition is checked?
-- What happens during one repetition?
-- What information can change?
-- What stops the repetition?
+* What condition is checked?
+* What happens during one repetition?
+* What information can change?
+* What stops the repetition?
 
 **Your notes:**
 
@@ -194,42 +194,42 @@ TODO: Record the path through your pseudocode and what causes each branch or loo
 
 ### Logical Steps — 35%
 
-- [ ] My design logically outlines the complete required program.
-- [ ] Another programmer could follow the order of the steps.
-- [ ] I represented all required functionality.
+* [ ] My design logically outlines the complete required program.
+* [ ] Another programmer could follow the order of the steps.
+* [ ] I represented all required functionality.
 
 ### Input/Output — 30%
 
-- [ ] I represented both bound inputs.
-- [ ] I represented guess input.
-- [ ] I represented required feedback and success output.
+* [ ] I represented both bound inputs.
+* [ ] I represented guess input.
+* [ ] I represented required feedback and success output.
 
 ### Program Flow — 35%
 
-- [ ] I used decision branching for the valid-guess outcomes.
-- [ ] I used loops for required repeated behavior.
-- [ ] Each loop has an understandable stopping condition.
-- [ ] Indentation shows which statements belong inside branches and loops.
+* [ ] I used decision branching for the valid-guess outcomes.
+* [ ] I used loops for required repeated behavior.
+* [ ] Each loop has an understandable stopping condition.
+* [ ] Indentation shows which statements belong inside branches and loops.
 
 ## 15. Design Checkpoint
 
-- [ ] Valid bounds are established before the target number is generated.
-- [ ] Invalid bounds can lead to new bound input.
-- [ ] A guess is validated against the selected range.
-- [ ] An invalid guess can lead to another guess.
-- [ ] Too-low and too-high valid guesses allow play to continue.
-- [ ] A correct guess ends the guessing process.
-- [ ] No starter `TODO:` prompts remain in the graded pseudocode.
+* [ ] Valid bounds are established before the target number is generated.
+* [ ] Invalid bounds can lead to new bound input.
+* [ ] A guess is validated against the selected range.
+* [ ] An invalid guess can lead to another guess.
+* [ ] Too-low and too-high valid guesses allow play to continue.
+* [ ] A correct guess ends the guessing process.
+* [ ] No starter `TODO:` prompts remain in the graded pseudocode.
 
 ## 16. Ready to Submit
 
 Before submission:
 
-- [ ] I reviewed the current Module Four Assignment Guidelines and Rubric.
-- [ ] I reviewed the official Higher/Lower Game Sample Output.
-- [ ] I traced multiple required behaviors through my pseudocode.
-- [ ] I saved the graded file as `design/hilow_game.pseudo`.
-- [ ] I understand that only the `.pseudo` file is required for submission.
+* [ ] I reviewed the current Module Four Assignment Guidelines and Rubric.
+* [ ] I reviewed the official Higher/Lower Game Sample Output.
+* [ ] I traced multiple required behaviors through my pseudocode.
+* [ ] I saved the graded file as `design/hilow_game.pseudo`.
+* [ ] I understand that only the `.pseudo` file is required for submission.
 
 # Optional Construct and Test Notes
 

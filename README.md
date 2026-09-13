@@ -21,6 +21,8 @@
 > [!NOTE]
 > **🆕 New for 2026 C-5:** IT 140 now uses GitHub repositories to provide assignment starter files, development resources, and supporting documentation.
 >
+> If you have a question, check [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) to see whether it has already been answered or ask a new question.
+>
 > If you find a problem with this GitHub repository or its instructions, or have a suggestion for improvement, please open [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to review existing issues or create a new issue.
 
 ---
@@ -30,9 +32,9 @@
 * **Task Type**: Required, graded, one submission required
 * **Repository Version**: 1.0.4
 * **Repository Version DTG**: 2026-09-07-14-30
-- **Design Problem**: Higher/Lower Game
-- **Graded Deliverable**:
-  - [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
+* **Design Problem**: Higher/Lower Game
+* **Graded Deliverable**:
+  * [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
 
 **Required assignment progress:** **0 Start Here** → [1 Analyze](analysis/README.md) → [2 Design](design/README.md) → [3 Submit](#3-submit-your-assignment)
 
@@ -47,11 +49,11 @@ Module Four continues the design-before-code work from Module Three and adds **l
 
 You will design pseudocode for a Higher/Lower Game. The game must:
 
-- obtain and validate lower and upper bounds;
-- generate a random number between those bounds;
-- obtain and validate guesses;
-- distinguish guesses that are too low, too high, or correct; and
-- repeat until the correct number is guessed.
+* obtain and validate lower and upper bounds;
+* generate a random number between those bounds;
+* obtain and validate guesses;
+* distinguish guesses that are too low, too high, or correct; and
+* repeat until the correct number is guessed.
 
 The repository also includes optional Python construction and testing practice so you can continue through the complete simplified Software Development Life Cycle (SDLC):
 
@@ -69,13 +71,13 @@ Construct and Test are optional practice and do not add graded deliverables.
 
 Edit and submit:
 
-- [`design/hilow_game.pseudo`](design/hilow_game.pseudo) — graded pseudocode
+* [`design/hilow_game.pseudo`](design/hilow_game.pseudo) — graded pseudocode
 
 ### Working notes; not submitted
 
 You may also edit:
 
-- [`hilow_game_sdw.md`](hilow_game_sdw.md) — Software Development Worksheet (SDW) working notes
+* [`hilow_game_sdw.md`](hilow_game_sdw.md) — Software Development Worksheet (SDW) working notes
 
 The SDW is a learning aid. It is not a graded deliverable unless your instructor specifically tells you otherwise.
 
@@ -83,7 +85,7 @@ The SDW is a learning aid. It is not a graded deliverable unless your instructor
 
 After your graded pseudocode is complete, you may edit:
 
-- [`src/hilow_game.py`](src/hilow_game.py) — optional Python construction practice
+* [`src/hilow_game.py`](src/hilow_game.py) — optional Python construction practice
 
 The provided test file is a practice tool. Do not edit it to make a test pass.
 
@@ -98,17 +100,17 @@ Do not edit the SRS, SDD, Draw.io file, README files, tests, `.github` files, re
 
 Before starting this assignment:
 
-- [ ] Complete the GitHub and Course IDE portions of the [Module One Setup Tasks](https://github.com/GC-STEM/it140-m1-setup-tasks).
-- [ ] Complete the assigned Module Four zyBooks activities before relying on the assignment to teach loops from the beginning.
-- [ ] Open the **Module Four Assignment Guidelines and Rubric** and the **Higher/Lower Game Sample Output** in D2L Brightspace before editing the starter file.
+* [ ] Complete the GitHub and Course IDE portions of the [Module One Setup Tasks](https://github.com/GC-STEM/it140-m1-setup-tasks).
+* [ ] Complete the assigned Module Four zyBooks activities before relying on the assignment to teach loops from the beginning.
+* [ ] Open the **Module Four Assignment Guidelines and Rubric** and the **Higher/Lower Game Sample Output** in D2L Brightspace before editing the starter file.
 
 Relevant Module Four zyBooks topics include:
 
-- **4.1 Loops (general)**
-- **4.2 While loops**
-- **4.3 More while examples**
-- **4.7 While vs. for loops**
-- **4.9 Developing programs incrementally**
+* **4.1 Loops (general)**
+* **4.2 While loops**
+* **4.3 More while examples**
+* **4.7 While vs. for loops**
+* **4.9 Developing programs incrementally**
 
 Earlier topics on input/output, `if`/`elif`/`else`, relational operators, Boolean expressions, and indentation also apply.
 
@@ -231,10 +233,10 @@ Open [Analyze Phase](analysis/README.md).
 
 During Analyze, focus on **what** the Higher/Lower Game must do. Use:
 
-- the official Guidelines and Rubric in D2L Brightspace;
-- the official Higher/Lower Game Sample Output;
-- the provided [Software Requirements Specification (SRS)](analysis/hilow_game_srs.md); and
-- the optional [Software Development Worksheet (SDW)](hilow_game_sdw.md).
+* the official Guidelines and Rubric in D2L Brightspace;
+* the official Higher/Lower Game Sample Output;
+* the provided [Software Requirements Specification (SRS)](analysis/hilow_game_srs.md); and
+* the optional [Software Development Worksheet (SDW)](hilow_game_sdw.md).
 
 Pay particular attention to **what repeats** and **what stops each repetition**. The assignment requires validation for both the selected bounds and the player's guesses.
 
@@ -244,15 +246,15 @@ Open [Design Phase](design/README.md).
 
 Complete:
 
-- [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
+* [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
 
 Your pseudocode should logically outline the required game, identify inputs and outputs, and use decision branching and loops to control program flow.
 
 The rubric weights are:
 
-- **Logical Steps — 35%**
-- **Input/Output — 30%**
-- **Program Flow — 35%**
+* **Logical Steps — 35%**
+* **Input/Output — 30%**
+* **Program Flow — 35%**
 
 Review the completed pseudocode against the current Guidelines and Rubric before submission.
 
@@ -276,11 +278,17 @@ These commands:
 * `git commit` saves a snapshot of those files in your local Git repository.
 * `git push` uploads that commit to your personal GitHub repository.
 
+---
+
 > [!NOTE]
-> If Git reports `nothing to commit, working tree clean`, your current files have already been committed. The `git push` command will still check whether your personal GitHub repository is up to date.
+> If Git reports `nothing to commit, working tree clean`, your current files have already been committed. The `git push` command will still check whether your personal GitHub repository is up to date.  
+
+---
 
 > [!IMPORTANT]
 > **Saving your work to GitHub does not submit your assignment.** Assignment submission, grading, and instructor feedback remain in D2L Brightspace.
+
+---
 
 ### 2.4 Review the Assignment Checks
 
@@ -290,12 +298,12 @@ A newly created personal repository should **not** fail merely because the grade
 
 The assignment artifact check can verify basic conditions such as:
 
-- required course files are still present;
-- committed changes are limited to student-editable files;
-- after graded work begins, the graded pseudocode differs from the starter state;
-- the pseudocode retains its outer `START` / `END` structure;
-- changed pseudocode no longer contains starter `TODO:` prompts; and
-- course-provided Markdown and configuration remain internally consistent.
+* required course files are still present;
+* committed changes are limited to student-editable files;
+* after graded work begins, the graded pseudocode differs from the starter state;
+* the pseudocode retains its outer `START` / `END` structure;
+* changed pseudocode no longer contains starter `TODO:` prompts; and
+* course-provided Markdown and configuration remain internally consistent.
 
 The checks also verify that the provided Draw.io reference remains readable, but the Draw.io file is **not** a graded Module Four deliverable.
 
@@ -316,7 +324,7 @@ In D2L Brightspace, open the **Module Four Assignment** and follow the current s
 
 Submit exactly the graded design file required by the assignment:
 
-- [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
+* [`design/hilow_game.pseudo`](design/hilow_game.pseudo)
 
 Do **not** submit the SDW, Draw.io reference, optional Python practice file, test file, GitHub Actions output, SRS, SDD, or repository README files unless your instructor specifically requests them.
 
@@ -371,10 +379,10 @@ git remote -v
 
 Use the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations of the SDLC, assignment documents, pseudocode, loops, course IDE tools, Git/GitHub, testing, sources, and AI use.
 
-- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about using this repository that do not request a completed graded solution.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided repository, starter files, documentation, or automated checks.
-- For **Codio Virtual Desktop performance, access, or outage problems**, contact the **IT Service Desk** using the link on the main menu bar in D2L Brightspace.
-- For **course IDE setup or lifecycle-script problems**, see [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support).
-- Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, deadlines, submissions, or course-specific questions.
+* Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about using this repository that do not request a completed graded solution.
+* Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided repository, starter files, documentation, or automated checks.
+* For **Codio Virtual Desktop performance, access, or outage problems**, contact the **IT Service Desk** using the link on the main menu bar in D2L Brightspace.
+* For **course IDE setup or lifecycle-script problems**, see [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support).
+* Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, deadlines, submissions, or course-specific questions.
 
 Do not post your completed graded pseudocode publicly when asking for help.

@@ -1,9 +1,9 @@
 # Software Requirements Specification (SRS)
 
-- **Course:** IT 140 - *Introduction to Scripting*
-- **Activity:** Module Four Assignment
-- **Program:** Higher/Lower Game
-- **Status:** Provided requirements reference; do not edit
+* **Course:** IT 140 - *Introduction to Scripting*
+* **Activity:** Module Four Assignment
+* **Program:** Higher/Lower Game
+* **Status:** Provided requirements reference; do not edit
 
 ## 0. General Description
 
@@ -15,17 +15,17 @@ This SRS reorganizes requirements from the Module Four Assignment Guidelines and
 
 The planned program shall:
 
-- **FR-1 — Obtain bounds.** Prompt the player to enter a lower bound and an upper bound.
-- **FR-2 — Validate bounds.** Ensure the lower bound is less than the upper bound.
-- **FR-3 — Repeat invalid-bound input.** Obtain bounds again when the entered bounds do not satisfy the required relationship.
-- **FR-4 — Generate the target number.** Generate a random number between the valid lower and upper bounds.
-- **FR-5 — Obtain a guess.** Prompt the player to enter a guess between the selected bounds.
-- **FR-6 — Validate guesses.** Ensure the player proceeds only with guesses between the selected bounds.
-- **FR-7 — Repeat invalid-guess input.** Obtain another guess when the entered guess is outside the selected bounds.
-- **FR-8 — Compare a valid guess.** Use decision branching to distinguish a valid guess that is lower than, higher than, or equal to the target number.
-- **FR-9 — Output guess feedback.** Output appropriate feedback for too-low, too-high, and correct guesses.
-- **FR-10 — Continue the game.** Continue prompting for guesses until the target number is guessed correctly.
-- **FR-11 — End after success.** Stop the guessing process after a correct guess.
+* **FR-1 — Obtain bounds.** Prompt the player to enter a lower bound and an upper bound.
+* **FR-2 — Validate bounds.** Ensure the lower bound is less than the upper bound.
+* **FR-3 — Repeat invalid-bound input.** Obtain bounds again when the entered bounds do not satisfy the required relationship.
+* **FR-4 — Generate the target number.** Generate a random number between the valid lower and upper bounds.
+* **FR-5 — Obtain a guess.** Prompt the player to enter a guess between the selected bounds.
+* **FR-6 — Validate guesses.** Ensure the player proceeds only with guesses between the selected bounds.
+* **FR-7 — Repeat invalid-guess input.** Obtain another guess when the entered guess is outside the selected bounds.
+* **FR-8 — Compare a valid guess.** Use decision branching to distinguish a valid guess that is lower than, higher than, or equal to the target number.
+* **FR-9 — Output guess feedback.** Output appropriate feedback for too-low, too-high, and correct guesses.
+* **FR-10 — Continue the game.** Continue prompting for guesses until the target number is guessed correctly.
+* **FR-11 — End after success.** Stop the guessing process after a correct guess.
 
 ## 2. Design Requirements
 
@@ -35,30 +35,30 @@ The graded assignment has one design deliverable.
 
 Create `design/hilow_game.pseudo` that:
 
-- logically outlines each step needed to satisfy the required game functionality;
-- identifies the required user inputs and program outputs;
-- represents validation of the lower and upper bounds;
-- represents validation of guesses;
-- uses decision branching for too-low, too-high, and correct guesses;
-- uses loops for required repeated behavior;
-- makes the stopping condition for the guessing process clear; and
-- uses indentation and pseudocode keywords so the program flow is understandable.
+* logically outlines each step needed to satisfy the required game functionality;
+* identifies the required user inputs and program outputs;
+* represents validation of the lower and upper bounds;
+* represents validation of guesses;
+* uses decision branching for too-low, too-high, and correct guesses;
+* uses loops for required repeated behavior;
+* makes the stopping condition for the guessing process clear; and
+* uses indentation and pseudocode keywords so the program flow is understandable.
 
 ### DR-2 — Rubric Alignment
 
 The official rubric evaluates the pseudocode using three criteria:
 
-- **Logical Steps — 35%**
-- **Input/Output — 30%**
-- **Program Flow — 35%**
+* **Logical Steps — 35%**
+* **Input/Output — 30%**
+* **Program Flow — 35%**
 
 A complete design should satisfy all three criteria without adding unrelated functionality.
 
 ## 3. Technology and File Constraints
 
-- **TC-1:** The graded deliverable shall remain a pseudocode text file (`.pseudo`).
-- **TC-2:** The assignment does not require a flowchart submission.
-- **TC-3:** Python construction and testing are optional practice and are not graded Module Four deliverables.
+* **TC-1:** The graded deliverable shall remain a pseudocode text file (`.pseudo`).
+* **TC-2:** The assignment does not require a flowchart submission.
+* **TC-3:** Python construction and testing are optional practice and are not graded Module Four deliverables.
 
 ## 4. Behavior Verification Cases
 
@@ -103,12 +103,12 @@ Each repeated section should have a clear condition that can eventually allow th
 
 The Module Four Assignment Guidelines and Rubric does not explicitly require:
 
-- handling nonnumeric text entered where a number is expected;
-- a fixed number of guesses;
-- a score or guess counter;
-- multiple rounds after the correct number is guessed;
-- exact wording for every output message; or
-- a flowchart submission.
+* handling nonnumeric text entered where a number is expected;
+* a fixed number of guesses;
+* a score or guess counter;
+* multiple rounds after the correct number is guessed;
+* exact wording for every output message; or
+* a flowchart submission.
 
 Do not add these as graded requirements unless your instructor or current course materials direct you to do so.
 

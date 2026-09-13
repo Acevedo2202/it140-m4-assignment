@@ -16,7 +16,7 @@ Module Four has one graded design deliverable: pseudocode. You do **not** need t
 
 Complete:
 
-- [`hilow_game.pseudo`](hilow_game.pseudo) — graded pseudocode
+* [`hilow_game.pseudo`](hilow_game.pseudo) — graded pseudocode
 
 The [Software Design Document (SDD)](hilow_game_sdd.md) provides design guidance without giving you a completed solution. The [SDW](../hilow_game_sdw.md) provides optional working space.
 
@@ -26,12 +26,12 @@ The course-provided [`hilow_game.drawio`](hilow_game.drawio) file is a reference
 
 Use:
 
-- the Module Four Assignment Guidelines and Rubric in D2L Brightspace;
-- the Higher/Lower Game Sample Output;
-- the [SRS](../analysis/hilow_game_srs.md);
-- the [SDD](hilow_game_sdd.md);
-- the optional [SDW](../hilow_game_sdw.md); and
-- the pseudocode starter template.
+* the Module Four Assignment Guidelines and Rubric in D2L Brightspace;
+* the Higher/Lower Game Sample Output;
+* the [SRS](../analysis/hilow_game_srs.md);
+* the [SDD](hilow_game_sdd.md);
+* the optional [SDW](../hilow_game_sdw.md); and
+* the pseudocode starter template.
 
 Relevant zyBooks topics include loops, `while` loops, decision branching, relational and Boolean expressions, indentation, and incremental development.
 
@@ -41,13 +41,13 @@ Relevant zyBooks topics include loops, `while` loops, decision branching, relati
 
 Make sure you can explain:
 
-- what lower and upper bounds the player provides;
-- what makes the bounds valid;
-- when a random number is generated;
-- what makes a guess valid;
-- the too-low, too-high, and correct outcomes;
-- what work repeats; and
-- what causes each repeated section to stop.
+* what lower and upper bounds the player provides;
+* what makes the bounds valid;
+* when a random number is generated;
+* what makes a guess valid;
+* the too-low, too-high, and correct outcomes;
+* what work repeats; and
+* what causes each repeated section to stop.
 
 If any of these are unclear, return to the [Analyze Phase](../analysis/README.md) before editing the graded file.
 
@@ -80,8 +80,8 @@ A loop should have a path toward its stopping condition. If the design repeats w
 
 The assignment includes two different kinds of decisions:
 
-- **validation decisions** determine whether input is acceptable; and
-- **game decisions** determine whether a valid guess is too low, too high, or correct.
+* **validation decisions** determine whether input is acceptable; and
+* **game decisions** determine whether a valid guess is too low, too high, or correct.
 
 Keep those purposes distinct in your design. A guess should satisfy the range requirement before it is treated as a valid game guess.
 
@@ -91,28 +91,28 @@ Open [`hilow_game.pseudo`](hilow_game.pseudo).
 
 Replace the `TODO:` prompts with your own pseudocode. Your finished design should:
 
-- logically outline the complete required game;
-- identify the required inputs and outputs;
-- represent validation for the lower and upper bounds;
-- represent validation for guesses;
-- represent random-number generation;
-- use decision branching for the three valid-guess outcomes;
-- use loops for repeated behavior;
-- make stopping conditions understandable; and
-- use indentation and pseudocode keywords consistently.
+* logically outline the complete required game;
+* identify the required inputs and outputs;
+* represent validation for the lower and upper bounds;
+* represent validation for guesses;
+* represent random-number generation;
+* use decision branching for the three valid-guess outcomes;
+* use loops for repeated behavior;
+* make stopping conditions understandable; and
+* use indentation and pseudocode keywords consistently.
 
 Pseudocode is a design tool, not executable Python. Focus on clear logic rather than exact Python punctuation or syntax.
 
 Appropriate pseudocode keywords may include words such as:
 
-- `INPUT`
-- `OUTPUT`
-- `SET` or `LET`
-- `IF`
-- `ELSE`
-- `WHILE`
-- `REPEAT`
-- `UNTIL`
+* `INPUT`
+* `OUTPUT`
+* `SET` or `LET`
+* `IF`
+* `ELSE`
+* `WHILE`
+* `REPEAT`
+* `UNTIL`
 
 There is no single universal pseudocode language. Use consistent terms that make the algorithm understandable.
 
@@ -122,13 +122,13 @@ Use the [SRS behavior verification cases](../analysis/hilow_game_srs.md#4-behavi
 
 At minimum, make sure you can follow the design for:
 
-- valid bounds;
-- invalid bounds followed by valid bounds;
-- a guess below the selected range;
-- a guess above the selected range;
-- a valid guess that is too low;
-- a valid guess that is too high; and
-- a correct guess that ends the game.
+* valid bounds;
+* invalid bounds followed by valid bounds;
+* a guess below the selected range;
+* a guess above the selected range;
+* a valid guess that is too low;
+* a valid guess that is too high; and
+* a correct guess that ends the game.
 
 If you cannot explain exactly what happens next in one of these cases, revise the design before submission.
 
@@ -136,28 +136,28 @@ If you cannot explain exactly what happens next in one of these cases, revise th
 
 ### Logical Steps — 35%
 
-- [ ] The pseudocode logically outlines the complete required program.
-- [ ] The steps are in an order another programmer can follow.
-- [ ] All required functionality is represented.
+* [ ] The pseudocode logically outlines the complete required program.
+* [ ] The steps are in an order another programmer can follow.
+* [ ] All required functionality is represented.
 
 ### Input/Output — 30%
 
-- [ ] Lower-bound and upper-bound inputs are represented.
-- [ ] Guess input is represented.
-- [ ] Validation behavior is represented.
-- [ ] Required feedback and success output are represented.
+* [ ] Lower-bound and upper-bound inputs are represented.
+* [ ] Guess input is represented.
+* [ ] Validation behavior is represented.
+* [ ] Required feedback and success output are represented.
 
 ### Program Flow — 35%
 
-- [ ] Decision branching distinguishes too-low, too-high, and correct guesses.
-- [ ] Loops represent the required repeated behavior.
-- [ ] The stopping conditions are understandable.
-- [ ] Indentation makes nested decisions and loops easy to follow.
+* [ ] Decision branching distinguishes too-low, too-high, and correct guesses.
+* [ ] Loops represent the required repeated behavior.
+* [ ] The stopping conditions are understandable.
+* [ ] Indentation makes nested decisions and loops easy to follow.
 
 ### Starter completion
 
-- [ ] No starter `TODO:` prompts remain in the graded pseudocode.
-- [ ] The file remains in `.pseudo` format.
+* [ ] No starter `TODO:` prompts remain in the graded pseudocode.
+* [ ] The file remains in `.pseudo` format.
 
 ## 8. Review the Assignment Checks
 
@@ -169,12 +169,12 @@ The checks also verify basic repository integrity. They do **not** evaluate whet
 
 If you have difficulty completing this phase:
 
-- Compare the [SRS](../analysis/hilow_game_srs.md), [SDD](hilow_game_sdd.md), and your SDW notes one requirement at a time.
-- Review the official Higher/Lower Game Sample Output for behavior examples.
-- See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations of pseudocode, validation, branching, and loops.
-- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for repository-related questions that do not request a completed graded solution.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided files, documentation, or automated checks.
-- Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
+* Compare the [SRS](../analysis/hilow_game_srs.md), [SDD](hilow_game_sdd.md), and your SDW notes one requirement at a time.
+* Review the official Higher/Lower Game Sample Output for behavior examples.
+* See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations of pseudocode, validation, branching, and loops.
+* Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for repository-related questions that do not request a completed graded solution.
+* Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with the provided files, documentation, or automated checks.
+* Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
 
 ## Next Step
 

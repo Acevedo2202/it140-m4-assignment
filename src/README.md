@@ -20,7 +20,7 @@ Complete this phase only **after** your graded pseudocode is finished. The goal 
 
 If you choose the practice, edit:
 
-- [`hilow_game.py`](hilow_game.py)
+* [`hilow_game.py`](hilow_game.py)
 
 Do not submit this file unless your instructor specifically requests it.
 
@@ -28,19 +28,19 @@ Do not submit this file unless your instructor specifically requests it.
 
 Use:
 
-- your completed [`../design/hilow_game.pseudo`](../design/hilow_game.pseudo);
-- the provided starter [`hilow_game.py`](hilow_game.py);
-- the Higher/Lower Game Sample Output;
-- the [SRS](../analysis/hilow_game_srs.md); and
-- relevant zyBooks material.
+* your completed [`../design/hilow_game.pseudo`](../design/hilow_game.pseudo);
+* the provided starter [`hilow_game.py`](hilow_game.py);
+* the Higher/Lower Game Sample Output;
+* the [SRS](../analysis/hilow_game_srs.md); and
+* relevant zyBooks material.
 
 Useful Module Four sections include:
 
-- 4.1 Loops (general)
-- 4.2 While loops
-- 4.3 More while examples
-- 4.7 While vs. for loops
-- 4.9 Developing programs incrementally
+* 4.1 Loops (general)
+* 4.2 While loops
+* 4.3 More while examples
+* 4.7 While vs. for loops
+* 4.9 Developing programs incrementally
 
 Earlier material on input/output, type conversion, decision branching, relational operators, Boolean expressions, and indentation also applies.
 
@@ -52,11 +52,11 @@ Do not use coding as a substitute for the graded pseudocode.
 
 Before editing `hilow_game.py`, make sure your pseudocode represents:
 
-- bound input and validation;
-- random-number generation;
-- guess input and validation;
-- the three valid-guess outcomes; and
-- repetition until the correct guess.
+* bound input and validation;
+* random-number generation;
+* guess input and validation;
+* the three valid-guess outcomes; and
+* repetition until the correct guess.
 
 ### 2. Open Design and Code Side by Side
 
@@ -72,10 +72,10 @@ If coding reveals that the design is incomplete or inconsistent, revise the pseu
 
 The starter provides organizational scaffolding, including:
 
-- `from random import randint`
-- `def main() -> None:`
-- the `main()` docstring
-- the `if __name__ == "__main__":` main guard
+* `from random import randint`
+* `def main() -> None:`
+* the `main()` docstring
+* the `if __name__ == "__main__":` main guard
 
 Leave that scaffolding in place and replace the TODO comments with your own code.
 
@@ -93,9 +93,9 @@ Translate repeated design behavior into loops rather than copying the same state
 
 For each loop, keep the same questions you used during Design:
 
-- What condition controls repetition?
-- What changes during the loop?
-- What lets the loop stop?
+* What condition controls repetition?
+* What changes during the loop?
+* What lets the loop stop?
 
 ### 6. Run Incrementally
 
@@ -120,10 +120,10 @@ python3 src/hilow_game.py
 
 Replace the TODOs in the module docstring so it briefly describes:
 
-- the optional program's purpose;
-- major inputs;
-- major processing; and
-- major output categories.
+* the optional program's purpose;
+* major inputs;
+* major processing; and
+* major output categories.
 
 Keep the description about this Higher/Lower Game, not another assignment.
 
@@ -137,29 +137,29 @@ If you did not use an outside source, delete the unused reference TODO line.
 
 Before moving to optional testing:
 
-- [ ] My graded pseudocode was complete before I began optional coding.
-- [ ] I changed only TODO areas in the starter.
-- [ ] My module docstring describes the Higher/Lower Game.
-- [ ] My code follows my own pseudocode.
-- [ ] I left the starter import, `main()` definition, and main guard in place.
-- [ ] I used loops for repeated behavior.
-- [ ] Each loop has a path toward its stopping condition.
-- [ ] I ran after small changes and corrected errors incrementally.
-- [ ] I acknowledged outside help I actually used or deleted the unused reference TODO.
-- [ ] No TODO lines remain in my completed optional file.
-- [ ] The program runs without a Python error for a normal input sequence.
+* [ ] My graded pseudocode was complete before I began optional coding.
+* [ ] I changed only TODO areas in the starter.
+* [ ] My module docstring describes the Higher/Lower Game.
+* [ ] My code follows my own pseudocode.
+* [ ] I left the starter import, `main()` definition, and main guard in place.
+* [ ] I used loops for repeated behavior.
+* [ ] Each loop has a path toward its stopping condition.
+* [ ] I ran after small changes and corrected errors incrementally.
+* [ ] I acknowledged outside help I actually used or deleted the unused reference TODO.
+* [ ] No TODO lines remain in my completed optional file.
+* [ ] The program runs without a Python error for a normal input sequence.
 
 ## Help and Support
 
 If you have difficulty:
 
-- Start with your completed pseudocode and translate one step at a time.
-- Return to [Design](../design/README.md) if the design is incomplete.
-- Review the Higher/Lower Game Sample Output for expected behavior.
-- See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental guidance.
-- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about optional practice tools.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report technical problems with the provided starter.
-- Contact your instructor through D2L Brightspace for assignment requirements or grading questions.
+* Start with your completed pseudocode and translate one step at a time.
+* Return to [Design](../design/README.md) if the design is incomplete.
+* Review the Higher/Lower Game Sample Output for expected behavior.
+* See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental guidance.
+* Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about optional practice tools.
+* Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report technical problems with the provided starter.
+* Contact your instructor through D2L Brightspace for assignment requirements or grading questions.
 
 ## Next Step
 

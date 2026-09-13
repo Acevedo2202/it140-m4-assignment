@@ -24,18 +24,18 @@ You may record brief working notes in the [Software Development Worksheet (SDW)]
 
 Use these materials:
 
-- **Module Four Assignment Guidelines and Rubric** in D2L Brightspace — official assignment and grading requirements
-- **Higher/Lower Game Sample Output** in D2L Brightspace — official behavior examples
-- [Higher/Lower Game SRS](hilow_game_srs.md) — organized requirements reference
-- [Software Development Worksheet (SDW)](../hilow_game_sdw.md) — optional guided working notes
+* **Module Four Assignment Guidelines and Rubric** in D2L Brightspace — official assignment and grading requirements
+* **Higher/Lower Game Sample Output** in D2L Brightspace — official behavior examples
+* [Higher/Lower Game SRS](hilow_game_srs.md) — organized requirements reference
+* [Software Development Worksheet (SDW)](../hilow_game_sdw.md) — optional guided working notes
 
 Relevant zyBooks topics include:
 
-- **4.1 Loops (general)**
-- **4.2 While loops**
-- **4.3 More while examples**
-- **4.7 While vs. for loops**
-- **4.9 Developing programs incrementally**
+* **4.1 Loops (general)**
+* **4.2 While loops**
+* **4.3 More while examples**
+* **4.7 While vs. for loops**
+* **4.9 Developing programs incrementally**
 
 Earlier decision-branching and relational-operator topics are also important.
 
@@ -47,13 +47,13 @@ Read the complete Module Four Assignment Guidelines and Rubric before working fr
 
 Identify what the assignment says about:
 
-- lower-bound and upper-bound inputs;
-- validation of the relationship between the bounds;
-- random-number generation;
-- guess input and validation;
-- too-low, too-high, and correct outcomes;
-- repeated behavior; and
-- the one required submission file.
+* lower-bound and upper-bound inputs;
+* validation of the relationship between the bounds;
+* random-number generation;
+* guess input and validation;
+* too-low, too-high, and correct outcomes;
+* repeated behavior; and
+* the one required submission file.
 
 ### 2. Review the Sample Output as Behavior
 
@@ -61,11 +61,11 @@ The sample output is not pseudocode. Use it as evidence of what the planned prog
 
 For each interaction, ask:
 
-- What input did the player provide?
-- What output did the program produce?
-- What decision caused that output?
-- What must repeat next?
-- What condition would stop that repetition?
+* What input did the player provide?
+* What output did the program produce?
+* What decision caused that output?
+* What must repeat next?
+* What condition would stop that repetition?
 
 The assignment allows output wording to differ. Focus on the required behavior rather than copying exact sentences.
 
@@ -75,12 +75,12 @@ Open the [SRS](hilow_game_srs.md) and read it from beginning to end.
 
 Pay particular attention to:
 
-- `## 1. Functional Requirements`
-- `## 2. Design Requirements`
-- `## 3. Technology and File Constraints`
-- `## 4. Behavior Verification Cases`
-- `## 5. Interpretation Notes`
-- `## 6. Out of Scope Unless Your Instructor Adds a Requirement`
+* `## 1. Functional Requirements`
+* `## 2. Design Requirements`
+* `## 3. Technology and File Constraints`
+* `## 4. Behavior Verification Cases`
+* `## 5. Interpretation Notes`
+* `## 6. Out of Scope Unless Your Instructor Adds a Requirement`
 
 ### 4. Identify Input, Processing, and Output
 
@@ -90,12 +90,12 @@ Think about the required behavior as:
 
 Identify:
 
-- what information comes from the player;
-- what value the program generates;
-- what validation is required;
-- what comparisons determine game feedback;
-- what information is output; and
-- what work must repeat.
+* what information comes from the player;
+* what value the program generates;
+* what validation is required;
+* what comparisons determine game feedback;
+* what information is output; and
+* what work must repeat.
 
 Record these ideas in the Analyze section of the [SDW](../hilow_game_sdw.md), if useful.
 
@@ -115,11 +115,11 @@ Do not write the finished pseudocode yet. First be able to explain what conditio
 
 The assignment does **not** require you to add unrelated features such as:
 
-- handling nonnumeric text input;
-- counting guesses;
-- limiting the number of guesses;
-- starting another round after a correct guess; or
-- matching one exact output sentence.
+* handling nonnumeric text input;
+* counting guesses;
+* limiting the number of guesses;
+* starting another round after a correct guess; or
+* matching one exact output sentence.
 
 Those behaviors should not become graded requirements unless your instructor or current course materials add them.
 
@@ -131,25 +131,25 @@ Use the checkpoint in the SDW before moving to Design.
 
 Before continuing, make sure:
 
-- [ ] I read the complete Module Four Assignment Guidelines and Rubric.
-- [ ] I reviewed the Higher/Lower Game Sample Output.
-- [ ] I read the complete SRS.
-- [ ] I can explain the game's purpose in my own words.
-- [ ] I identified the required inputs, generated value, decisions, outputs, and repeated behavior.
-- [ ] I can explain both input-validation requirements.
-- [ ] I can explain what stops each repeated section.
-- [ ] I did not add extra requirements that the assignment does not state.
-- [ ] I am ready to express the complete design as pseudocode.
+* [ ] I read the complete Module Four Assignment Guidelines and Rubric.
+* [ ] I reviewed the Higher/Lower Game Sample Output.
+* [ ] I read the complete SRS.
+* [ ] I can explain the game's purpose in my own words.
+* [ ] I identified the required inputs, generated value, decisions, outputs, and repeated behavior.
+* [ ] I can explain both input-validation requirements.
+* [ ] I can explain what stops each repeated section.
+* [ ] I did not add extra requirements that the assignment does not state.
+* [ ] I am ready to express the complete design as pseudocode.
 
 ## Help and Support
 
 If you have difficulty completing this phase:
 
-- Review the [SRS](hilow_game_srs.md) first.
-- See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations.
-- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about the repository or provided analysis materials.
-- Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with repository files or tools.
-- Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
+* Review the [SRS](hilow_game_srs.md) first.
+* See the [Module Four Assignment Wiki](https://github.com/GC-STEM/it140-m4-assignment/wiki) for supplemental explanations.
+* Use [GitHub Discussions](https://github.com/GC-STEM/it140-m4-assignment/discussions) for questions about the repository or provided analysis materials.
+* Use [GitHub Issues](https://github.com/GC-STEM/it140-m4-assignment/issues) to report a technical problem with repository files or tools.
+* Contact your instructor through D2L Brightspace for assignment requirements, grading, or feedback.
 
 ## Next Step
 
