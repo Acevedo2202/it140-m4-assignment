@@ -1,41 +1,11 @@
-"""TODO: Replace with a one-line summary of the optional practice program.
+random_number = generate random number between 1 and 10
+game_status = true
 
-Input:
-    TODO: Identify the major user inputs.
-
-Process:
-    TODO: Summarize validation, random selection, decisions, and
-    repetition from your pseudocode.
-
-Output:
-    TODO: Identify the major categories of console output.
-"""
-
-# === Imports ===
-from random import randint
-
-
-# === Main Function ===
-def main() -> None:
-    """Run the optional higher/lower game practice program."""
-
-    # TODO: Obtain and validate the lower and upper bounds.
-
-    # TODO: Generate a random number from the valid range using randint.
-
-    # TODO: Obtain and validate the player's first guess.
-
-    # TODO: Repeat until the player guesses the random number.
-    # Give too-low or too-high feedback for incorrect valid guesses.
-    # Obtain and validate another guess when the game continues.
-
-    # TODO: Display a success message after the correct guess.
-
-
-# === Main Guard ===
-if __name__ == "__main__":
-    main()
-
-
-# === References ===
-# TODO: Add an APA-style reference for a source you used, or delete this line.
+while game_status is true:
+    user_guess =  get user input
+if user_guess equals random_number:
+    Print "Congratulations! You have guessed the number".
+Else if user_guess is less than random_number:
+   print "The number is higher. Try again."
+else if user_guess is more than random_number:
+print "The nymber is lower. Try again.
